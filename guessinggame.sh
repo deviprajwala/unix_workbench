@@ -25,6 +25,12 @@ do
       echo "Congratulations! your guess is correct."
       c=1
   else
+      if [ $value -lt $guess ]
+      then
+          echo "your guess is large"
+      else
+          echo "your guess is small"
+      fi
       echo "Guess the number of files in the directory"
       read -n1 guess
       printf "\n"
